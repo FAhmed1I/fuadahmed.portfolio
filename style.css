@@ -2,16 +2,16 @@
      TOKENS
      ============================================================ */
   :root{
-    --bg: #0A0E1A;
-    --panel: #121A2C;
-    --panel-2: #0E1526;
-    --silk: #FFFFFF;
-    --silk-dim: #C7CCDA;
-    --copper: #6C8CFF;
-    --copper-bright: #8FA8FF;
+    --bg: #F4F6FB;
+    --panel: #FFFFFF;
+    --panel-2: #EDF0F8;
+    --silk: #0F1626;
+    --silk-dim: #4B546B;
+    --copper: #3355DD;
+    --copper-bright: #2946C4;
     --muted: #7C87A3;
-    --line: rgba(108,140,255,0.28);
-    --line-faint: rgba(255,255,255,0.08);
+    --line: rgba(51,85,221,0.25);
+    --line-faint: rgba(15,22,38,0.08);
     --radius: 2px;
     --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
     --sans: 'IBM Plex Sans', -apple-system, sans-serif;
@@ -27,7 +27,7 @@
 
   body{
     background:
-      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0) 0 0/28px 28px,
+      radial-gradient(circle at 1px 1px, rgba(15,22,38,0.05) 1px, transparent 0) 0 0/28px 28px,
       var(--bg);
     color: var(--silk);
     font-family: var(--sans);
@@ -64,7 +64,7 @@
      ============================================================ */
   header.site-nav{
     position: sticky; top: 0; z-index: 50;
-    background: rgba(10,14,26,0.86);
+    background: rgba(244,246,251,0.86);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--line-faint);
   }
@@ -251,7 +251,14 @@
   }
   .timeline li:last-child{ border-bottom: none; }
   .timeline .when{ font-family: var(--mono); font-size: 11.5px; color: var(--muted); letter-spacing: 0.02em; }
-  .timeline .what h4{ font-family: var(--mono); font-size: 14.5px; color: var(--silk); font-weight: 600; margin-bottom: 4px; }
+  .timeline .role-row{ display:flex; align-items:center; gap: 10px; margin-bottom: 4px; }
+  .timeline .logo{
+    width: 30px; height: 30px; flex-shrink: 0;
+    border: 1px solid var(--line); border-radius: 4px;
+    background: var(--panel);
+    object-fit: contain; padding: 3px;
+  }
+  .timeline .what h4{ font-family: var(--mono); font-size: 14.5px; color: var(--silk); font-weight: 600; }
   .timeline .what .org{ font-family: var(--sans); font-size: 13px; color: var(--silk-dim); margin-bottom: 6px; }
   .timeline .what p{ font-family: var(--sans); font-size: 13.5px; color: var(--silk-dim); max-width: 62ch; }
 

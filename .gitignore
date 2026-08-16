@@ -1,0 +1,9 @@
+# Claude Code local settings
+.claude/
+
+# macOS archive/metadata junk
+__MACOSX/
+.DS_Store
+
+# Windows junk
+Thumbs.db
