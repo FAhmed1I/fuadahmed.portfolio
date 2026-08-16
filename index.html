@@ -236,6 +236,42 @@
   .skill-list li:last-child{ border-bottom: none; }
 
   /* ============================================================
+     RESUME
+     ============================================================ */
+  .resume-download{
+    display:flex; align-items:center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin-bottom: 36px;
+    background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  }
+  .resume-download .fname{ font-family: var(--mono); font-size: 13px; color: var(--silk-dim); }
+  .resume-download .dl-btn{
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
+    border: 1px solid var(--copper); color: var(--copper-bright);
+    padding: 8px 16px; border-radius: var(--radius);
+  }
+  .resume-download .dl-btn:hover{ background: var(--line); text-decoration: none; }
+
+  .timeline{ list-style:none; }
+  .timeline li{
+    display:grid; grid-template-columns: 130px 1fr; gap: 20px;
+    padding: 20px 0; border-bottom: 1px solid var(--line-faint);
+  }
+  .timeline li:last-child{ border-bottom: none; }
+  .timeline .when{ font-family: var(--mono); font-size: 11.5px; color: var(--muted); letter-spacing: 0.02em; }
+  .timeline .what h4{ font-family: var(--mono); font-size: 14.5px; color: var(--silk); font-weight: 600; margin-bottom: 4px; }
+  .timeline .what .org{ font-family: var(--sans); font-size: 13px; color: var(--silk-dim); margin-bottom: 6px; }
+  .timeline .what p{ font-family: var(--sans); font-size: 13.5px; color: var(--silk-dim); max-width: 62ch; }
+
+  .resume-subhead{
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--copper); margin: 44px 0 8px;
+  }
+  .resume-subhead:first-of-type{ margin-top: 0; }
+
+  /* ============================================================
      CONTACT / FOOTER
      ============================================================ */
   footer{ padding: 56px 0 64px; }
@@ -253,8 +289,9 @@
   <div class="nav-inner">
     <div class="nav-mark"><span class="dot"></span>FUAD</div>
     <nav class="nav-links">
-      <a href="#projects">Projects</a>
       <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -273,7 +310,7 @@
       <div class="cell"><span class="label">Focus</span><span class="value">PCB design / embedded</span></div>
       <div class="cell"><span class="label">Tools</span><span class="value">KiCad, STM32, SWD/JTAG</span></div>
       <div class="cell"><span class="label">Status</span><span class="value">Actively building</span></div>
-      <div class="cell"><span class="label">Sheet</span><span class="value">01 of 03</span></div>
+      <div class="cell"><span class="label">Sheet</span><span class="value">01 of 04</span></div>
     </div>
   </section>
 
@@ -395,6 +432,51 @@
     </div>
   </section>
 
+  <!-- ============ RESUME ============ -->
+  <section class="section" id="resume">
+    <div class="section-head">
+      <h2>Resume</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="resume-download">
+      <span class="fname">Fuad_Ahmed_Resume.pdf</span>
+      <a class="dl-btn" href="#">Download PDF ↓</a>
+    </div>
+
+    <p class="resume-subhead">Education</p>
+    <ul class="timeline">
+      <li>
+        <span class="when">20XX — 20XX</span>
+        <div class="what">
+          <h4>B.Eng / B.Sc, Electrical Engineering</h4>
+          <div class="org">University name</div>
+          <p>Relevant coursework: circuits, embedded systems, power electronics, signals — swap in your actual courses.</p>
+        </div>
+      </li>
+    </ul>
+
+    <p class="resume-subhead">Experience</p>
+    <ul class="timeline">
+      <li>
+        <span class="when">20XX — Present</span>
+        <div class="what">
+          <h4>Role title</h4>
+          <div class="org">Company / lab / organization</div>
+          <p>One or two lines on what you actually did — a real outcome or scope beats a duty list.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">20XX — 20XX</span>
+        <div class="what">
+          <h4>Role title</h4>
+          <div class="org">Company / lab / organization</div>
+          <p>Same here — keep it concrete and specific to what you built or shipped.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
   <!-- ============ CONTACT ============ -->
   <footer id="contact">
     <div class="section-head">
@@ -406,7 +488,7 @@
       <a href="#">GitHub →</a>
       <a href="#">LinkedIn →</a>
     </div>
-    <p class="fine">Sheet 03 of 03 — last revised August 2026</p>
+    <p class="fine">Sheet 04 of 04 — last revised August 2026</p>
   </footer>
 
 </main>
