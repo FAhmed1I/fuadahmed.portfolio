@@ -211,8 +211,7 @@
   /* ============================================================
      ABOUT
      ============================================================ */
-  .about-grid{ display:grid; grid-template-columns: 1.3fr 1fr; gap: 48px; }
-  @media (max-width: 720px){ .about-grid{ grid-template-columns: 1fr; } }
+  .about-grid{ display:grid; grid-template-columns: 1fr; gap: 32px; }
   .about-grid p{ color: var(--silk-dim); font-size: 15px; margin-bottom: 14px; max-width: 58ch; }
 
   .skill-list{ list-style:none; }
@@ -254,7 +253,7 @@
   .timeline .role-row{ display:flex; flex-direction: column; align-items:flex-start; gap: 10px; margin-bottom: 8px; }
   .timeline .logo{
     width: 120px; height: 120px; flex-shrink: 0;
-    border: 1px solid var(--line); border-radius: 8px;
+    border: 0px solid var(--line); border-radius: 0px;
     background: var(--panel);
     object-fit: contain; padding: 10px;
   }
