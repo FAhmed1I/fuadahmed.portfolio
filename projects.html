@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Fuad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <div class="nav-mark"><span class="dot"></span>FUAD</div>
+    <nav class="nav-links">
+      <a href="index.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" style="padding-top: 64px;">
+    <div class="section-head">
+      <h2>Projects</h2>
+      <div class="rule"></div>
+      <span class="count">03 logged</span>
+    </div>
+
+    <!-- PROJECT 1 -->
+    <article class="sheet">
+      <div class="sheet-media">
+        <span>Drop a board photo or render here — 1600×800 recommended</span>
+        <span class="tag">IMG · mini-drone-pcb.jpg</span>
+      </div>
+      <div class="sheet-body">
+        <div class="sheet-top">
+          <h3>249g-Class Mini Drone Flight Controller</h3>
+          <span class="status active">Active build</span>
+        </div>
+        <p class="desc">
+          Custom flight controller PCB built to stay under the 249g registration threshold. Dual-powered
+          from USB-C or an onboard LiPo, with integrated USB-C PD charging and four independent motor drivers.
+          Weight budget is the constraint driving every component choice.
+        </p>
+        <div class="specs">
+          <div class="spec"><span class="k">MCU</span><span class="v">STM32F4</span></div>
+          <div class="spec"><span class="k">Debug</span><span class="v">SWD, 2×10 JTAG header</span></div>
+          <div class="spec"><span class="k">Motor drivers</span><span class="v">4× TI MCT8316A1VRGFR</span></div>
+          <div class="spec"><span class="k">Motors</span><span class="v">4× Happymodel RS1102 KV10000</span></div>
+          <div class="spec"><span class="k">Battery</span><span class="v">2S1P 4000mAh 21700</span></div>
+          <div class="spec"><span class="k">Charging</span><span class="v">USB-C PD — MAX77958 + MAX77961</span></div>
+        </div>
+        <div class="sheet-links">
+          <a href="#">Schematic →</a>
+          <a href="#">Build log →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 2 -->
+    <article class="sheet">
+      <div class="sheet-media">
+        <span>Drop a board photo or render here — 1600×800 recommended</span>
+        <span class="tag">IMG · lipo-charger-board.jpg</span>
+      </div>
+      <div class="sheet-body">
+        <div class="sheet-top">
+          <h3>1S LiPo USB-C Charger Board</h3>
+          <span class="status planning">Planning</span>
+        </div>
+        <p class="desc">
+          A standalone board powered from a single-cell 3.7V LiPo, with onboard USB-C charging integrated
+          directly rather than relying on an external module. Separate design from the drone flight controller —
+          built around a smaller, simpler pack.
+        </p>
+        <div class="specs">
+          <div class="spec"><span class="k">Battery</span><span class="v">3.7V 1000mAh LiPo</span></div>
+          <div class="spec"><span class="k">Connector</span><span class="v">JST-PH, built-in protection</span></div>
+          <div class="spec"><span class="k">Charging</span><span class="v">Onboard USB-C</span></div>
+        </div>
+        <div class="sheet-links">
+          <a href="#">Schematic →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 3 -->
+    <article class="sheet">
+      <div class="sheet-media">
+        <span>Drop a board photo or render here — 1600×800 recommended</span>
+        <span class="tag">IMG · fan-speed-control.jpg</span>
+      </div>
+      <div class="sheet-body">
+        <div class="sheet-top">
+          <h3>Speed Control for a PWM-less DC Fan</h3>
+          <span class="status research">Research</span>
+        </div>
+        <p class="desc">
+          Investigating speed control options for a Gelid Solutions FN-PX14-11 140mm 3-pin fan that lacks
+          native PWM support — working from a confirmed GND / +12V / tach pinout to explore alternative
+          control methods.
+        </p>
+        <div class="specs">
+          <div class="spec"><span class="k">Fan</span><span class="v">Gelid FN-PX14-11, 140mm, 3-pin</span></div>
+          <div class="spec"><span class="k">Pinout</span><span class="v">GND, +12V, tach</span></div>
+          <div class="spec"><span class="k">Constraint</span><span class="v">No native PWM input</span></div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <footer id="contact">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="contact-row">
+      <a href="mailto:you@example.com">you@example.com</a>
+      <a href="#">GitHub →</a>
+      <a href="#">LinkedIn →</a>
+    </div>
+    <p class="fine">Sheet 02 of 03 — Projects — last revised August 2026</p>
+  </footer>
+
+</main>
+
+<script>
+  // Reveal project sheets on scroll — respects reduced-motion via CSS.
+  const sheets = document.querySelectorAll('.sheet');
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    sheets.forEach(s => io.observe(s));
+  } else {
+    sheets.forEach(s => s.classList.add('is-visible'));
+  }
+</script>
+
+</body>
+</html>
