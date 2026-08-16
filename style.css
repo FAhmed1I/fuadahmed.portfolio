@@ -251,12 +251,12 @@
   }
   .timeline li:last-child{ border-bottom: none; }
   .timeline .when{ font-family: var(--mono); font-size: 11.5px; color: var(--muted); letter-spacing: 0.02em; }
-  .timeline .role-row{ display:flex; align-items:center; gap: 10px; margin-bottom: 4px; }
+  .timeline .role-row{ display:flex; align-items:center; gap: 16px; margin-bottom: 4px; }
   .timeline .logo{
-    width: 30px; height: 30px; flex-shrink: 0;
-    border: 1px solid var(--line); border-radius: 4px;
+    width: 64px; height: 64px; flex-shrink: 0;
+    border: 1px solid var(--line); border-radius: 6px;
     background: var(--panel);
-    object-fit: contain; padding: 3px;
+    object-fit: contain; padding: 6px;
   }
   .timeline .what h4{ font-family: var(--mono); font-size: 14.5px; color: var(--silk); font-weight: 600; }
   .timeline .what .org{ font-family: var(--sans); font-size: 13px; color: var(--silk-dim); margin-bottom: 6px; }
