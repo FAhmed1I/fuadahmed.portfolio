@@ -324,14 +324,13 @@
   /* ============================================================
      RESUME
      ============================================================ */
-  .resume-columns{
+  .timeline-columns{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    margin-bottom: 36px;
+    gap: 0 48px;
   }
   @media (max-width: 720px){
-    .resume-columns{ grid-template-columns: 1fr; }
+    .timeline-columns{ grid-template-columns: 1fr; }
   }
 
   .resume-download{
@@ -339,6 +338,7 @@
     border: 1px solid var(--line);
     border-radius: var(--radius);
     padding: 16px 20px;
+    margin-top: 36px;
     background: linear-gradient(180deg, var(--panel), var(--panel-2));
   }
   .resume-download .fname{ font-family: var(--mono); font-size: 13px; color: var(--silk-dim); }
