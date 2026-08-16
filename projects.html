@@ -30,14 +30,16 @@
     <div class="section-head">
       <h2>Projects</h2>
       <div class="rule"></div>
-      <span class="count">03 logged</span>
+      <span class="count">04 logged</span>
     </div>
 
     <!-- PROJECT 1 -->
     <article class="sheet">
-      <div class="sheet-media">
-        <span>Drop a board photo or render here — 1600×800 recommended</span>
-        <span class="tag">IMG · mini-drone-pcb.jpg</span>
+      <div class="sheet-media carousel">
+        <div class="carousel-slide placeholder">
+          <span>Drop a board photo or render here — 1600×800 recommended</span>
+          <span class="tag">IMG · mini-drone-pcb.jpg</span>
+        </div>
       </div>
       <div class="sheet-body">
         <div class="sheet-top">
@@ -66,9 +68,11 @@
 
     <!-- PROJECT 2 -->
     <article class="sheet">
-      <div class="sheet-media">
-        <span>Drop a board photo or render here — 1600×800 recommended</span>
-        <span class="tag">IMG · lipo-charger-board.jpg</span>
+      <div class="sheet-media carousel">
+        <div class="carousel-slide placeholder">
+          <span>Drop a board photo or render here — 1600×800 recommended</span>
+          <span class="tag">IMG · lipo-charger-board.jpg</span>
+        </div>
       </div>
       <div class="sheet-body">
         <div class="sheet-top">
@@ -93,9 +97,11 @@
 
     <!-- PROJECT 3 -->
     <article class="sheet">
-      <div class="sheet-media">
-        <span>Drop a board photo or render here — 1600×800 recommended</span>
-        <span class="tag">IMG · fan-speed-control.jpg</span>
+      <div class="sheet-media carousel">
+        <div class="carousel-slide placeholder">
+          <span>Drop a board photo or render here — 1600×800 recommended</span>
+          <span class="tag">IMG · fan-speed-control.jpg</span>
+        </div>
       </div>
       <div class="sheet-body">
         <div class="sheet-top">
@@ -111,6 +117,31 @@
           <div class="spec"><span class="k">Fan</span><span class="v">Gelid FN-PX14-11, 140mm, 3-pin</span></div>
           <div class="spec"><span class="k">Pinout</span><span class="v">GND, +12V, tach</span></div>
           <div class="spec"><span class="k">Constraint</span><span class="v">No native PWM input</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 4 -->
+    <article class="sheet">
+      <div class="sheet-media carousel">
+        <div class="carousel-slide"><img src="Images/50Ah Power Board.png" alt="50Ah Power Board render"></div>
+        <div class="carousel-slide"><img src="Images/50Ah Power Board 3D View.png" alt="50Ah Power Board 3D view"></div>
+        <div class="carousel-slide"><img src="Images/50Ah Power Board Real Image.jpg" alt="50Ah Power Board assembled"></div>
+      </div>
+      <div class="sheet-body">
+        <div class="sheet-top">
+          <h3>50Ah Power Board</h3>
+          <span class="status planning">Planning</span>
+        </div>
+        <p class="desc">
+          Fill in a description of the 50Ah power board here — what it powers, why 50Ah, and any
+          notable design constraints.
+        </p>
+        <div class="specs">
+          <div class="spec"><span class="k">Capacity</span><span class="v">50Ah</span></div>
+        </div>
+        <div class="sheet-links">
+          <a href="#">Schematic →</a>
         </div>
       </div>
     </article>
@@ -149,6 +180,57 @@
   } else {
     sheets.forEach(s => s.classList.add('is-visible'));
   }
+
+  // Image carousel — auto-detects slide count per .sheet-media, adds
+  // arrows/dots only when there's more than one to click through.
+  document.querySelectorAll('.sheet-media.carousel').forEach(container => {
+    const slides = Array.from(container.querySelectorAll('.carousel-slide'));
+    if (slides.length === 0) return;
+    slides[0].classList.add('is-active');
+    if (slides.length < 2) return;
+
+    container.classList.add('has-multiple');
+    let index = 0;
+    let dots = [];
+
+    const show = (i) => {
+      slides[index].classList.remove('is-active');
+      dots[index].classList.remove('is-active');
+      index = (i + slides.length) % slides.length;
+      slides[index].classList.add('is-active');
+      dots[index].classList.add('is-active');
+    };
+
+    const prevBtn = document.createElement('button');
+    prevBtn.className = 'carousel-btn prev';
+    prevBtn.type = 'button';
+    prevBtn.setAttribute('aria-label', 'Previous image');
+    prevBtn.textContent = '‹';
+    prevBtn.addEventListener('click', () => show(index - 1));
+
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'carousel-btn next';
+    nextBtn.type = 'button';
+    nextBtn.setAttribute('aria-label', 'Next image');
+    nextBtn.textContent = '›';
+    nextBtn.addEventListener('click', () => show(index + 1));
+
+    const dotsWrap = document.createElement('div');
+    dotsWrap.className = 'carousel-dots';
+    dots = slides.map((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'dot' + (i === 0 ? ' is-active' : '');
+      dot.setAttribute('aria-label', `Go to image ${i + 1}`);
+      dot.addEventListener('click', () => show(i));
+      dotsWrap.appendChild(dot);
+      return dot;
+    });
+
+    slides.forEach(slide => slide.addEventListener('click', () => show(index + 1)));
+
+    container.append(prevBtn, nextBtn, dotsWrap);
+  });
 </script>
 
 </body>
