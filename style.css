@@ -269,7 +269,7 @@
   .timeline .when{ font-family: var(--mono); font-size: 11.5px; color: var(--muted); letter-spacing: 0.02em; }
   .timeline .role-row{ display:flex; flex-direction: column; align-items:flex-start; gap: 8px; margin-bottom: 8px; }
   .timeline .logo{
-    width: 120px; height: 120px; flex-shrink: 0;
+    width: 200px; height: 180px; flex-shrink: 0;
     border: 0px solid var(--line); border-radius: 0px;
     background: var(--panel);
     object-fit: contain; padding: 10px;
