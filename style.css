@@ -268,6 +268,22 @@
   }
   .resume-download .dl-btn:hover{ background: var(--line); text-decoration: none; }
 
+  .pdf-preview{
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--panel);
+  }
+  .pdf-preview iframe{
+    display: block;
+    width: 100%;
+    height: 900px;
+    border: none;
+  }
+  @media (max-width: 640px){
+    .pdf-preview iframe{ height: 560px; }
+  }
+
   .timeline{ list-style:none; }
   .timeline li{
     display:grid; grid-template-columns: 130px 1fr; gap: 20px;
