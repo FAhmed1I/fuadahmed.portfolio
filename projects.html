@@ -181,12 +181,73 @@
     sheets.forEach(s => s.classList.add('is-visible'));
   }
 
+  // Lightbox — full-size view opened by clicking any carousel photo.
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox';
+  lightbox.innerHTML = `
+    <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+    <button type="button" class="lightbox-btn prev" aria-label="Previous image">&lsaquo;</button>
+    <img alt="">
+    <button type="button" class="lightbox-btn next" aria-label="Next image">&rsaquo;</button>
+  `;
+  document.body.appendChild(lightbox);
+  const lightboxImg = lightbox.querySelector('img');
+  const lightboxPrev = lightbox.querySelector('.lightbox-btn.prev');
+  const lightboxNext = lightbox.querySelector('.lightbox-btn.next');
+  let lightboxImages = [];
+  let lightboxIndex = 0;
+
+  const updateLightbox = () => {
+    const item = lightboxImages[lightboxIndex];
+    lightboxImg.src = item.src;
+    lightboxImg.alt = item.alt;
+    const multi = lightboxImages.length > 1;
+    lightboxPrev.style.display = multi ? 'flex' : 'none';
+    lightboxNext.style.display = multi ? 'flex' : 'none';
+  };
+  const openLightbox = (images, startIndex) => {
+    lightboxImages = images;
+    lightboxIndex = startIndex;
+    updateLightbox();
+    lightbox.classList.add('is-open');
+  };
+  const closeLightbox = () => lightbox.classList.remove('is-open');
+
+  lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  lightboxPrev.addEventListener('click', () => {
+    lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length;
+    updateLightbox();
+  });
+  lightboxNext.addEventListener('click', () => {
+    lightboxIndex = (lightboxIndex + 1) % lightboxImages.length;
+    updateLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('is-open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxPrev.click();
+    if (e.key === 'ArrowRight') lightboxNext.click();
+  });
+
   // Image carousel — auto-detects slide count per .sheet-media, adds
   // arrows/dots only when there's more than one to click through.
+  // Clicking a photo (in single- or multi-slide sheets) opens the lightbox.
   document.querySelectorAll('.sheet-media.carousel').forEach(container => {
     const slides = Array.from(container.querySelectorAll('.carousel-slide'));
     if (slides.length === 0) return;
     slides[0].classList.add('is-active');
+
+    const images = slides
+      .map(slide => slide.querySelector('img'))
+      .filter(Boolean)
+      .map(img => ({ src: img.src, alt: img.alt }));
+
+    slides.forEach((slide, i) => {
+      const img = slide.querySelector('img');
+      if (img) img.addEventListener('click', () => openLightbox(images, i));
+    });
+
     if (slides.length < 2) return;
 
     container.classList.add('has-multiple');
@@ -226,8 +287,6 @@
       dotsWrap.appendChild(dot);
       return dot;
     });
-
-    slides.forEach(slide => slide.addEventListener('click', () => show(index + 1)));
 
     container.append(prevBtn, nextBtn, dotsWrap);
   });
