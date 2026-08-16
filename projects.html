@@ -33,13 +33,34 @@
       <span class="count">04 logged</span>
     </div>
 
-    <!-- PROJECT 1 -->
+
+<!-- Telemetry Board -->
     <article class="sheet">
       <div class="sheet-media carousel">
-        <div class="carousel-slide placeholder">
-          <span>Drop a board photo or render here — 1600×800 recommended</span>
-          <span class="tag">IMG · mini-drone-pcb.jpg</span>
+        <div class="carousel-slide"><img src="Images/Start of Telem Layout.png" alt="Mini drone flight controller"></div>
+      </div>
+      <div class="sheet-body">
+        <div class="sheet-top">
+          <h3>Automotive Telemetry Board</h3>
+          <span class="status active">Active build</span>
         </div>
+        <p class="desc">
+        </p>
+        <div class="specs">
+          <div class="spec"><span class="k">MCU</span><span class="v">STM32F373CCT</span></div>
+          <div class="spec"><span class="k">Debug</span><span class="v">SWD, 2×10 JTAG header</span></div>
+          <div class="spec"><span class="k">Sensors</span><span class="v">LSM6DSRXTR Accelerometer, BMP585 Pressure Sensors <br> 4x Linearized RL0503-5820-97-MS Thermistors</span></div>
+        </div>
+        <div class="sheet-links">
+          <a href="Images/Telemetry Box.pdf">Schematic →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Drone Board -->
+    <article class="sheet">
+      <div class="sheet-media carousel">
+        <div class="carousel-slide"><img src="Images/drone stock.jpg" alt="Mini drone flight controller"></div>
       </div>
       <div class="sheet-body">
         <div class="sheet-top">
@@ -60,12 +81,37 @@
           <div class="spec"><span class="k">Charging</span><span class="v">USB-C PD — MAX77958 + MAX77961</span></div>
         </div>
         <div class="sheet-links">
-          <a href="#">Schematic →</a>
-          <a href="#">Build log →</a>
+          <a href="Images/Drone Board.pdf">Schematic →</a>
         </div>
       </div>
     </article>
 
+
+        <!--Paradigm 10kW Drivetrain -->
+    <article class="sheet">
+      <div class="sheet-media carousel">
+        <div class="carousel-slide">
+          <video controls preload="metadata">
+            <source src="Images/5999DC80-784B-48DC-90E8-7FA44298CB23.mov">
+          </video>
+        </div>
+      </div>
+      <div class="sheet-body">
+        <div class="sheet-top">
+          <h3>Paradigm 10kW Go-Kart Drivetrain</h3>
+          <span class="status planning">Complete</span>
+        </div>
+        <p class="desc">
+          10kW Powertrain for Paradigm 2026 Go Kart. <br>
+          - DC Contactor for Physical and Remote E-stop<br>
+          - Redundant shutoffs: If auxiliary power or control signals are lost, motor will not have power<br>
+          - Using Golden Motor Inverter<br>
+        </p>
+        <div class="spec"><span class="k">Top Speed</span><span class="v">120km/h (74.5mph)</span></div>
+        <div class="spec"><span class="k">Battery</span><span class="v">72V 50Ah Molicel</span></div>
+        <div class="spec"><span class="k">Motor</span><span class="v">10kW Golden Motor Liquid-Cooled BLDC</span></div>
+      </div>
+    </article>
     <!-- 50Ah Board -->
     <article class="sheet">
       <div class="sheet-media carousel">
