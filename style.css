@@ -286,7 +286,7 @@
   .timeline .what p{ font-family: var(--sans); font-size: 13.5px; color: var(--silk-dim); max-width: 62ch; }
 
   .resume-subhead{
-    font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    font-family: var(--mono); font-size: 24px; letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--copper); margin: 44px 0 8px;
   }
   .resume-subhead:first-of-type{ margin-top: 0; }
