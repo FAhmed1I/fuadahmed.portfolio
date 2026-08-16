@@ -26,9 +26,10 @@
   }
 
   body{
-    background:
-      radial-gradient(circle at 1px 1px, rgba(15,22,38,0.05) 1px, transparent 0) 0 0/28px 28px,
-      var(--bg);
+    background: url('Images/Chance Cove.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--silk);
     font-family: var(--sans);
     line-height: 1.6;
