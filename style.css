@@ -268,30 +268,13 @@
   }
   .resume-download .dl-btn:hover{ background: var(--line); text-decoration: none; }
 
-  .pdf-preview{
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    overflow: hidden;
-    background: var(--panel);
-  }
-  .pdf-preview iframe{
-    display: block;
-    width: 100%;
-    height: 900px;
-    border: none;
-  }
-  @media (max-width: 640px){
-    .pdf-preview iframe{ height: 560px; }
-  }
-
   .timeline{ list-style:none; }
   .timeline li{
-    display:grid; grid-template-columns: 130px 1fr; gap: 20px;
     padding: 20px 0; border-bottom: 1px solid var(--line-faint);
   }
   .timeline li:last-child{ border-bottom: none; }
   .timeline .when{ font-family: var(--mono); font-size: 11.5px; color: var(--muted); letter-spacing: 0.02em; }
-  .timeline .role-row{ display:flex; flex-direction: column; align-items:flex-start; gap: 10px; margin-bottom: 8px; }
+  .timeline .role-row{ display:flex; flex-direction: column; align-items:flex-start; gap: 8px; margin-bottom: 8px; }
   .timeline .logo{
     width: 120px; height: 120px; flex-shrink: 0;
     border: 0px solid var(--line); border-radius: 0px;
