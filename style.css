@@ -79,12 +79,12 @@
     max-width: 980px; margin: 0 auto;
   }
   .nav-mark{
-    font-family: var(--resume-font); font-size: 13px; font-weight: 600;
+    font-family: var(--resume-font); font-size: 16px; font-weight: 600;
     color: #FFFFFF; display:flex; align-items:center; gap:8px;
     justify-self: start;
   }
   .nav-mark .dot{ width:7px; height:7px; background: #8FA8FF; border-radius:50%; }
-  .nav-links{ display:flex; gap: 22px; font-family: var(--resume-font); font-size: 13px; justify-self: center; }
+  .nav-links{ display:flex; gap: 22px; font-family: var(--resume-font); font-size: 16px; justify-self: center; }
   .nav-links a{ color: #FFFFFF; }
   .nav-links a:hover{ color: #8FA8FF; text-decoration: none; }
 
