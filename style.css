@@ -379,7 +379,7 @@
     border-radius: var(--radius);
     padding: 16px 20px;
     margin-top: 36px;
-    background: linear-gradient(180deg, #16233F, #0F1626);
+    background: #16233F;
   }
   .resume-download .fname{ font-family: var(--mono); font-size: 13px; color: #C7CEE6; }
   .resume-download .dl-btn{
@@ -467,7 +467,7 @@
     left: 50%;
     margin-left: -50vw;
     padding: 56px 24px 64px;
-    background: var(--silk); color: #fff;
+    background: #16233F; color: #fff;
   }
   footer > div{ max-width: 980px; margin-left: auto; margin-right: auto; }
   footer .section-head h2{ color: #fff; }
