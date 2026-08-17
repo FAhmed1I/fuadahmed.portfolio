@@ -67,7 +67,7 @@
      ============================================================ */
   header.site-nav{
     position: sticky; top: 0; z-index: 50;
-    background: rgba(244,246,251,0.86);
+    background: rgba(22,35,63,0.94);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--line-faint);
   }
@@ -79,14 +79,14 @@
     max-width: 980px; margin: 0 auto;
   }
   .nav-mark{
-    font-family: var(--mono); font-size: 13px; font-weight: 600;
-    color: var(--silk); display:flex; align-items:center; gap:8px;
+    font-family: var(--resume-font); font-size: 13px; font-weight: 600;
+    color: #FFFFFF; display:flex; align-items:center; gap:8px;
     justify-self: start;
   }
-  .nav-mark .dot{ width:7px; height:7px; background: var(--copper-bright); border-radius:50%; }
-  .nav-links{ display:flex; gap: 22px; font-family: var(--mono); font-size: 12px; justify-self: center; }
-  .nav-links a{ color: var(--silk-dim); }
-  .nav-links a:hover{ color: var(--copper-bright); text-decoration: none; }
+  .nav-mark .dot{ width:7px; height:7px; background: #8FA8FF; border-radius:50%; }
+  .nav-links{ display:flex; gap: 22px; font-family: var(--resume-font); font-size: 13px; justify-self: center; }
+  .nav-links a{ color: #FFFFFF; }
+  .nav-links a:hover{ color: #8FA8FF; text-decoration: none; }
 
   /* ============================================================
      HERO
@@ -383,11 +383,12 @@
   }
   .resume-download .fname{ font-family: var(--mono); font-size: 13px; color: #C7CEE6; }
   .resume-download .dl-btn{
-    font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
-    border: 1px solid #8FA8FF; color: #8FA8FF;
+    font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    background: #16233F;
+    border: 1px solid #8FA8FF; color: #FFFFFF;
     padding: 8px 16px; border-radius: var(--radius);
   }
-  .resume-download .dl-btn:hover{ background: rgba(255,255,255,0.1); text-decoration: none; }
+  .resume-download .dl-btn:hover{ background: #1E2E52; text-decoration: none; }
 
   .pdf-preview{
     margin-top: 28px;
@@ -475,4 +476,4 @@
   /* ============================================================
      ACTIVE NAV STATE
      ============================================================ */
-  .nav-links a.active{ color: var(--copper-bright); }
+  .nav-links a.active{ color: #8FA8FF; }
