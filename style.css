@@ -461,7 +461,17 @@
   /* ============================================================
      CONTACT / FOOTER
      ============================================================ */
-  footer{ padding: 56px 0 64px; }
+  footer{
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    padding: 56px 24px 64px;
+    background: var(--silk); color: #fff;
+  }
+  footer > div{ max-width: 980px; margin-left: auto; margin-right: auto; }
+  footer .section-head h2{ color: #fff; }
+  footer .rule{ background: rgba(255,255,255,0.2); }
   footer .contact-row{
     display:flex; flex-wrap: wrap; gap: 28px; align-items: center;
     margin-bottom: 40px;
@@ -469,9 +479,11 @@
   footer .contact-row a{
     display:inline-flex; align-items:center; gap: 8px;
     font-family: var(--mono); font-size: 14px;
+    color: #fff;
   }
+  footer .contact-row a:hover{ color: #8FA8FF; }
   footer .contact-row svg{ width: 16px; height: 16px; flex-shrink: 0; }
-  footer .fine{ font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  footer .fine{ font-family: var(--mono); font-size: 11px; color: rgba(255,255,255,0.6); }
 
   /* ============================================================
      ACTIVE NAV STATE
