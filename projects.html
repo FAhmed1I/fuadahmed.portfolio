@@ -393,7 +393,11 @@
 
     slides.forEach((slide, i) => {
       const img = slide.querySelector('img');
-      if (img) img.addEventListener('click', () => openLightbox(images, i));
+      if (img) {
+        img.addEventListener('click', () => openLightbox(images, i));
+        slide.style.backgroundImage = `url("${img.src}")`;
+        slide.classList.add('has-img-bg');
+      }
     });
 
     if (slides.length < 2) return;
