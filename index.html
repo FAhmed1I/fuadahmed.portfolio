@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fuad — Hardware &amp; Electronics Portfolio</title>
+<title>Fuad Ahmed</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -27,19 +27,19 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <p class="eyebrow">Electronics</p>
-        <h1>I'm Fuad Ahmed</h1>
-        <h2>Senior Mechatronics Engineering Student @ MUN</h2>
+    <div class="hero-inner">
+      <div class="hero-banner">
+        <div class="hero-bg-carousel">
+          <div class="hero-bg-slide is-active" style="background-image: url('Images/Chance Cove.JPG')"></div>
+          <div class="hero-bg-slide is-active" style="background-image: url('Images/Chance\ Cove\ Beach.jpeg')"></div>
+          <div class="hero-bg-slide is-active" style="background-image: url('Images/La\ Manche\ Bridge.jpeg')"></div>
+          <div class="hero-bg-slide is-active" style="background-image: url('Images/Butterpot\ Big\ Pond.jpeg')"></div>
 
-        <div class="titleblock">
-          <div class="cell"><span class="label">Interests</span><span class="value">Robotics, EVs, PCB Design, Power Electronics</span></div>
         </div>
-      </div>
-
-      <div class="hero-media">
-        <img src="Images/Fuad Ahmed .jpg" alt="Fuad Ahmed">
+        <div class="hero-text">
+          <h1>Fuad Ahmed</h1>
+          <h2>Senior Mechatronics Engineering Student @ MUN</h2>
+        </div>
       </div>
     </div>
   </section>
@@ -51,13 +51,18 @@
       <div class="rule"></div>
     </div>
     <div class="about-grid">
-      <div>
-        <p>I work hands-on across the stack of a physical product: schematic capture, PCB layout, and
-          power electronics. Most of what's here started as a personal project, or work for a student design project.</p>
-        <p>Recent work includes designing electronics for electric vehicles and robotics applications</p>
+      <div class="about-top">
+        <div class="about-copy">
+          <p>I'm a Senior Mechatronics Engineering Student at the Memorial University of Newfoundland, 
+            with expected graduation in 2028. I have a strong interest in electronics, specifically in robotics and electric vehicle
+            applications. Check out some of my projects on this website!
+
+          </p>
+        </div>
+        <img class="about-photo" src="Images/Fuad Ahmed .jpg" alt="Fuad Ahmed">
       </div>
       <ul class="skill-list">
-        <li><span>PCB Design</span><span>KiCad/Altium Designed</span></li>
+        <li><span>PCB Design</span><span>KiCad, Altium Designer, LTSpice</span></li>
         <li><span>Lab Testing</span><span>Oscilloscopes, Function Generators, Multimeters, Impedance Analyzers, Vector Network Analyzers</span></li>
         <li><span>Power Electronics</span><span>High Frequency Inverters, Rectifiers. Buck Converters, Buck-Boost Converters, LDOs</span></li>
       </ul>
@@ -77,6 +82,20 @@
   </footer>
 
 </main>
+
+<script>
+  // Hero background carousel — auto-advances through .hero-bg-slide
+  // elements; does nothing if there's only one.
+  const heroSlides = document.querySelectorAll('.hero-bg-slide');
+  if (heroSlides.length > 1) {
+    let heroIndex = 0;
+    setInterval(() => {
+      heroSlides[heroIndex].classList.remove('is-active');
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      heroSlides[heroIndex].classList.add('is-active');
+    }, 6000);
+  }
+</script>
 
 </body>
 </html>
