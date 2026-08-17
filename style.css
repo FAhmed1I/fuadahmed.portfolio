@@ -399,8 +399,10 @@
     object-fit: contain;
   }
   .timeline .what{ text-align: center; }
-  .timeline .what h4{ font-family: var(--resume-font); font-size: 16px; color: var(--silk); font-weight: 600; }
-  .timeline .what .org{ font-family: var(--resume-font); font-size: 14px; color: var(--silk-dim); margin-bottom: 6px; }
+  .timeline .what h4{ font-family: var(--resume-font); font-size: 20px; color: var(--silk); font-weight: 600; }
+  .timeline .what .org{ font-family: var(--resume-font); font-size: 18px; font-weight: 600; color: #000000; margin-bottom: 2px; }
+  .timeline .what .org i{ font-weight: 400; font-style: italic; }
+  .timeline .what .location{ font-family: var(--resume-font); font-size: 16px; color: var(--muted); margin-bottom: 6px; }
   .timeline .what p{ font-family: var(--resume-font); font-size: 14.5px; color: var(--silk-dim); max-width: 62ch; margin-left: auto; margin-right: auto; }
   .timeline .what .bullet-list{
     text-align: left;
