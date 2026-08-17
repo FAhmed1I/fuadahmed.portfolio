@@ -283,6 +283,20 @@
   .status.planning{ color: var(--muted); }
   .status.research{ color: var(--silk-dim); }
 
+  .tags{ display:flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .org-tag{
+    display:inline-flex; align-items:center; gap: 6px;
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.04em;
+    padding: 3px 10px 3px 3px; border-radius: 999px;
+    border: 1px solid var(--line); color: var(--silk-dim);
+  }
+  .org-tag img{
+    width: 18px; height: 18px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: var(--panel);
+  }
+
   .sheet p.desc{ color: var(--silk-dim); font-size: 14.5px; margin: 12px 0 18px; max-width: 68ch; }
 
   .specs{
@@ -355,10 +369,10 @@
   .resume-download .dl-btn:hover{ background: var(--line); text-decoration: none; }
 
   .timeline{ list-style:none; }
-  .timeline li{
+  .timeline > li{
     padding: 20px 0; border-bottom: 1px solid var(--line-faint);
   }
-  .timeline li:last-child{ border-bottom: none; }
+  .timeline > li:last-child{ border-bottom: none; }
   .timeline .when{ font-family: var(--resume-font); font-size: 12.5px; color: var(--muted); letter-spacing: 0.02em; }
   .timeline .role-row{ display:flex; flex-direction: column; align-items:center; gap: 8px; margin-bottom: 8px; }
   .timeline .logo{
@@ -369,6 +383,16 @@
   .timeline .what h4{ font-family: var(--resume-font); font-size: 16px; color: var(--silk); font-weight: 600; }
   .timeline .what .org{ font-family: var(--resume-font); font-size: 14px; color: var(--silk-dim); margin-bottom: 6px; }
   .timeline .what p{ font-family: var(--resume-font); font-size: 14.5px; color: var(--silk-dim); max-width: 62ch; margin-left: auto; margin-right: auto; }
+  .timeline .what .bullet-list{
+    text-align: left;
+    max-width: 62ch;
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+  .timeline .what .bullet-list li{
+    font-family: var(--resume-font); font-size: 14.5px; color: var(--silk-dim);
+    margin-bottom: 4px;
+  }
 
   .resume-subhead{
     font-family: var(--mono); font-size: 24px; letter-spacing: 0.12em; text-transform: uppercase;
