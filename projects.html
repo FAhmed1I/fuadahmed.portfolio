@@ -80,6 +80,8 @@
           <span class="org-tag"><img src="Images/Fuad Ahmed .jpg" alt="Personal">Personal</span>
         </div>
         <p class="desc">
+          Automotive Telemetry board for data collection during testing. Logs vibration, pressure, acceleration and temperatures.
+          Started this project to use while testing Paradigm and Formula MUN vehicles. 
         </p>
         <div class="specs">
           <div class="spec"><span class="k">MCU</span><span class="v">STM32F373CCT</span></div>
@@ -107,6 +109,7 @@
           <span class="org-tag"><img src="Images/Formula MUN.png" alt="Formula MUN">Formula MUN</span>
         </div>
         <p class="desc">
+          250V Drivetrain and shutoff circuit for a full size FSAE EV 
         </p>
         <div class="specs">
           <div class="spec"><span class="k">Top Speed</span><span class="v">100 km/h (62 mph)</span></div>
@@ -141,12 +144,12 @@
         <div class="tags">
           <span class="org-tag"><img src="Images/Copy of paradigm-geometry-bg-05.png" alt="Paradigm Engineering">Paradigm Engineering</span>
         </div>
-        <p class="desc">
-          10kW Powertrain for Paradigm 2026 Go Kart. <br>
-          - DC Contactor for Physical and Remote E-stop<br>
-          - Redundant shutoffs: If auxiliary power or control signals are lost, motor will not have power<br>
-          - Using Golden Motor Inverter<br>
-        </p>
+        <p class="desc">10kW Powertrain for Paradigm 2026 Go Kart.</p>
+        <ul class="bullet-list">
+          <li>DC Contactor for Physical and Remote E-stop</li>
+          <li>Redundant shutoffs: If auxiliary power or control signals are lost, motor will not have power</li>
+          <li>Using Golden Motor Inverter</li>
+        </ul>
         <div class="spec"><span class="k">Top Speed</span><span class="v">120km/h (74.5mph)</span></div>
         <div class="spec"><span class="k">Battery</span><span class="v">72V 50Ah Molicel</span></div>
         <div class="spec"><span class="k">Motor</span><span class="v">10kW Golden Motor Liquid-Cooled BLDC</span></div>
@@ -167,15 +170,17 @@
         <div class="tags">
           <span class="org-tag"><img src="Images/Copy of paradigm-geometry-bg-05.png" alt="Paradigm Engineering">Paradigm Engineering</span>
         </div>
-        <p class="desc">
-          Power Distribution PCB for Paradigm 2026 Go Kart. <br>
-          - Supplied using 48V LiNMC Battery<br>
-          - Powers all onboard motors for steering<br>
-          - 2 seperate 48V-12V Buck Converters<br>
-          - 12V-5V Buck<br>
-          - Battery Intake protections using hotswap IC<br>
-        </p>
-
+        <p class="desc">Power Distribution PCB for Paradigm 2026 Go Kart.</p>
+        <ul class="bullet-list">
+          <li>Supplied using 48V LiNMC Battery</li>
+          <li>Powers all onboard motors for steering</li>
+          <li>2 seperate 48V-12V Buck Converters</li>
+          <li>12V-5V Buck</li>
+          <li>Battery Intake protections using hotswap IC</li>
+        </ul>
+        <div class="spec"><span class="k">Buck Controller</span><span class="v">Onsemi FAN6500B</span></div>
+        <div class="spec"><span class="k">Power Levels</span><span class="v">48V, 12V, 5V, 3V3</span></div>
+        <div class="spec"><span class="k">Layers</span><span class="v">4</span></div>
         <div class="sheet-links">
           <a href="Images/50AH Power Board Schematic.png">Schematic →</a>
         </div>
@@ -197,13 +202,13 @@
           <span class="org-tag"><img src="Images/Copy of paradigm-geometry-bg-05.png" alt="Paradigm Engineering">Paradigm Engineering</span>
         </div>
         <p class="desc">
-          Power Distribution PCB for Paradigm 2026 Go Kart. <br>
-          - Supplied using 48V LiNMC Battery<br>
-          - Powers all onboard motors for steering<br>
-          - 2 seperate 48V-12V Buck Converters<br>
-          - 12V-5V Buck<br>
-          - Battery Intake protections using hotswap IC<br>
+          Final Control PCB for Paradigm AKS 2026. Based on STM32 POC board, with addition of a CAN transceiver and 
+          additional pin breakouts.
         </p>
+        <div class="spec"><span class="k">Microprocessors</span><span class="v">STM32G474RET6</span></div>
+        <div class="spec"><span class="k">Interfaces</span><span class="v">JTAG, UART, USB, CAN</span></div>
+        <div class="spec"><span class="k">Power Levels</span><span class="v">5V & 3V3 (Using STMLD3985M33R_SOT23)</span></div>
+        <div class="spec"><span class="k">Layers</span><span class="v">4</span></div>
 
         <div class="sheet-links">
           <a href="Images/Aux CTRL Schematic.png">Schematic →</a>
@@ -226,14 +231,13 @@
           <span class="org-tag"><img src="Images/Copy of paradigm-geometry-bg-05.png" alt="Paradigm Engineering">Paradigm Engineering</span>
         </div>
         <p class="desc">
-          Power Distribution PCB for Paradigm 2026 Go Kart. <br>
-          - Supplied using 48V LiNMC Battery<br>
-          - Powers all onboard motors for steering<br>
-          - 2 seperate 48V-12V Buck Converters<br>
-          - 12V-5V Buck<br>
-          - Battery Intake protections using hotswap IC<br>
+          Proof of Concept STM32 Board for testing and development of AKS 2026 Controls. Served as validation of hardware design
+          and firmware integration of the STM platform and STM32G474. 
         </p>
-
+        <div class="spec"><span class="k">Microprocessors</span><span class="v">STM32G474RET6</span></div>
+        <div class="spec"><span class="k">Interfaces</span><span class="v">JTAG, UART, USB</span></div>
+        <div class="spec"><span class="k">Power Levels</span><span class="v">5V & 3V3 (Using STMLD3985M33R_SOT23)</span></div>
+        <div class="spec"><span class="k">Layers</span><span class="v">4</span></div>
         <div class="sheet-links">
           <a href="Images/STM32 POC Board.pdf">Schematic →</a>
         </div>
@@ -251,13 +255,12 @@
           <span class="status planning">Complete</span>
         </div>
         <p class="desc">
-          Power Distribution PCB for Paradigm 2026 Go Kart. <br>
-          - Supplied using 48V LiNMC Battery<br>
+          Final Project for ECE4510: Digital Logic and Microprocessors
 
         </p>
 
         <div class="sheet-links">
-          <a href="Images/ECE4510_Group1_DigiDuel_Report.pdf">Schematic →</a>
+          <a href="Images/ECE4510_Group1_DigiDuel_Report.pdf">Detailed Report →</a>
         </div>
       </div>
     </article>
@@ -277,12 +280,7 @@
           <span class="org-tag"><img src="Images/Copy of paradigm-geometry-bg-05.png" alt="Paradigm Engineering">Paradigm Engineering</span>
         </div>
         <p class="desc">
-          Power Distribution PCB for Paradigm 2026 Go Kart. <br>
-          - Supplied using 48V LiNMC Battery<br>
-          - Powers all onboard motors for steering<br>
-          - 2 seperate 48V-12V Buck Converters<br>
-          - 12V-5V Buck<br>
-          - Battery Intake protections using hotswap IC<br>
+         Backup System for the 50Ah Board using premade buck converter modules
         </p>
 
         <div class="sheet-links">

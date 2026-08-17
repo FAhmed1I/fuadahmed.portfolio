@@ -298,6 +298,8 @@
   }
 
   .sheet p.desc{ color: var(--silk-dim); font-size: 14.5px; margin: 12px 0 18px; max-width: 68ch; }
+  .sheet-body .bullet-list{ margin: 12px 0 18px; padding-left: 20px; max-width: 68ch; }
+  .sheet-body .bullet-list li{ color: var(--silk-dim); font-size: 14.5px; margin-bottom: 4px; }
 
   .specs{
     display: grid;
