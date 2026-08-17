@@ -379,15 +379,15 @@
     border-radius: var(--radius);
     padding: 16px 20px;
     margin-top: 36px;
-    background: linear-gradient(180deg, var(--panel), var(--panel-2));
+    background: linear-gradient(180deg, #16233F, #0F1626);
   }
-  .resume-download .fname{ font-family: var(--mono); font-size: 13px; color: var(--silk-dim); }
+  .resume-download .fname{ font-family: var(--mono); font-size: 13px; color: #C7CEE6; }
   .resume-download .dl-btn{
     font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
-    border: 1px solid var(--copper); color: var(--copper-bright);
+    border: 1px solid #8FA8FF; color: #8FA8FF;
     padding: 8px 16px; border-radius: var(--radius);
   }
-  .resume-download .dl-btn:hover{ background: var(--line); text-decoration: none; }
+  .resume-download .dl-btn:hover{ background: rgba(255,255,255,0.1); text-decoration: none; }
 
   .pdf-preview{
     margin-top: 28px;
